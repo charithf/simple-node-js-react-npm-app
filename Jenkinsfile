@@ -9,17 +9,17 @@ pipeline {
         CI = 'true'
     }
     stages {
-        stage('Build System 1') { 
+        stage('Build System 11') { 
             steps {
                 sh 'npm install' 
             }
         }
-        stage('Test Application 2') {
+        stage('Test Application 21') {
             steps {
                 sh './jenkins/scripts/test.sh'
             }
         }
-	stage('Deliver Product 3') {
+	stage('Deliver Product 31') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
